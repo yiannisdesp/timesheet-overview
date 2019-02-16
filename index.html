@@ -1,0 +1,42 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="180x180" href="dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="dist/favicon/site.webmanifest">
+    <link rel="mask-icon" href="dist/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="dist/styles.css">
+    <title>Timesheets Overview</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Your Timesheet Overview</h2>
+        <form>
+            <div class="form-group">
+                <a class="btn btn-block btn-primary" id="upload-btn"><span class="glyph glyph-open-file"></span> Open your timesheet</a>
+                <input type="file" name="timesheet" accept=".xls,.xlsx">
+            </div>
+        </form>
+        <h5 id="errors" class="hidden errors-container"><span class="label label-danger"></span></h5>
+        <div id="stats"></div>
+        <h3 class="monthly-hours-chart-title hidden">Monthly hours allocated for the following projects</h3>
+        <canvas id="monthly-hours-chart" style="width:100%" height="600"></canvas>
+        <br><br>
+        <h3 class="total-hours-chart-title hidden">Total hours allocated for the following projects</h3>
+        <canvas id="total-hours-chart" style="width:100%" height="1200"></canvas>
+        <br><br>
+        <h3 class="timelines-chart-title hidden">Projects Timelines</h3>
+        <canvas id="timelines-chart" style="width:100%" height="800"></canvas>
+        <br>
+        <div class="pull-right">yiannisdesp feb 2019</div>
+    </div>
+    <script src="dist/app.js"></script>
+</body>
+</html>
